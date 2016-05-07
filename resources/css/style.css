@@ -1,0 +1,226 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+}
+
+.clearfix {zoom:1}
+.clearfix:after {
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+section {
+	padding: 50px 0;
+}
+
+/* ----  Header  -----*/
+
+nav {
+	overflow: hidden;
+}
+
+nav a {
+	display: inline-block;
+	color: #fff;
+	font-weight: 400;
+	padding: 10px 0px 10px 50px;
+	text-decoration: none;
+	position: relative;
+	background-color: #e67e22;
+}
+
+nav a:first-child {
+	border-left: 1px solid #000;
+}
+
+nav a:after {
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #e67e22;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	left: 100%;
+	z-index: 2;
+}
+
+nav a:before {
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;  
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #000;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1; 
+}
+
+.header-box {
+	position: relative;
+	height: 40vh;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../img/london.jpg);
+	/*background-attachment: fixed;*/
+	color: #fff;
+}
+
+.header-h1 {
+	position: absolute;
+	top: 30%;
+	left: 5%;
+	font-size: 2.5em;
+}
+
+.header-p {
+	position: absolute;
+	top: 55%;
+	left: 5%;
+}
+
+/*--- section-1 ----*/
+.section-1 p {
+	padding-right: 20px;
+	line-height: 150%;
+}
+
+.section-1 i {
+	padding-right: 10px;
+}
+
+.section-1 .span-1-of-3 p {
+	padding-bottom: 20px;
+}
+
+.btn:link,
+.btn:visited {
+	margin-top: 10px;
+	margin-left: 5%;
+	width: 200px;
+	text-align: center;
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: 400;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: background-color 0.4s ease, color 0.4s;
+	background-color: #fff;
+	border: 1px solid #e67e22;
+	color: #e67e22;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: #e67e22;
+	color: #fff;
+}
+
+
+/*--- section-2 -----*/
+.section-2 {
+	background-color: #fafafa;
+	height: 100%;
+}
+
+.paw-title {
+	margin: 50px 0 30px 10px;
+}
+
+.paw {
+	float: left;
+	margin-right: 30px;
+}
+
+.paw i {
+	font-size: 3.5em;
+}
+
+.title {
+	float: left;
+}
+
+h2 {
+	letter-spacing: 1px;
+}
+
+.title p {
+	margin-top: 5px;
+	font-weight: 400;
+}
+
+.share {
+	margin: 20px 0px;
+}
+
+.share i {
+	margin: 0 10px 0 5px;
+	transition: color 0.4s ease;
+}
+
+.share i:hover,
+.share i:active {
+	color: #e67e22;
+}
+
+.type-list {
+	margin: 30px 40px 0 0;
+	border: 1px solid #000;
+}
+
+.type-list li {
+	list-style: none;
+	padding: 10px 10px;
+}
+
+.type-list li a:link,
+.type-list li a:visited {
+	text-decoration: none;
+}
+
+.facilities {
+	margin-top: 40px;
+}
+
+.facilities h3 {
+	margin-bottom: 30px;
+}
+
+input[type="checkbox"] {
+	width: 25px;
+	height: 15px;
+}
+
+.facilities ul {
+	padding-left: 10px;
+}
+
+.facilities ul li {
+	display: inline-block;
+	width: 23%;
+	margin: 10px 0;
+}

@@ -46,10 +46,6 @@ nav a {
 	background-color: #e67e22;
 }
 
-nav a:first-child {
-	border-left: 1px solid #fff;
-}
-
 nav a:after {
 	content: " "; 
 	display: block; 

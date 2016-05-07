@@ -1,0 +1,67 @@
+/*--- ipad or big tablet ----*/
+@media only screen and (max-width: 1023px) {
+	section {
+		padding: 20px 20px;
+	}
+
+	.btn:link,
+	.btn:visited {
+		width: 150px;
+		font-weight: 300;
+	}
+}
+
+/*--- large phone like iphone6/iphone6plus ----*/
+@media only screen and (max-width: 767px) {
+	.header-h1 {
+		font-size: 2em;
+	}
+
+	.btn:link,
+	.btn:visited {
+		margin-top: 20px;
+		width: 75%;
+	}
+
+	.mobile-select {
+		display: block;
+	}
+
+	.mobile-select select {
+		margin-top: 20px;
+		width: 100%;
+		padding: 5px;
+		background-color: #fff;
+	}
+
+	.type-list {
+		display: none;
+	}
+
+	.facilities ul li {
+		width: 45%;
+		font-size: 0.9em;
+	}
+}
+
+
+/*--- iphone5 and smaller ---*/
+@media only screen and (max-width: 480px) {
+	.header-h1 {
+		font-size: 1.5em;
+	}
+
+	.paw {
+		margin-top: -20px;
+		margin-bottom: 10px;
+		font-size: 0.6em;
+	}
+
+	h2 {
+		font-size: 1.2em;
+	}
+
+	.facilities ul {
+		padding: 0;
+	}
+}

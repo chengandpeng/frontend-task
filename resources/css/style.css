@@ -1,3 +1,4 @@
+/*--- init setting ---*/
 * {
 	margin: 0;
 	padding: 0;
@@ -46,7 +47,7 @@ nav a {
 }
 
 nav a:first-child {
-	border-left: 1px solid #000;
+	border-left: 1px solid #fff;
 }
 
 nav a:after {
@@ -71,7 +72,7 @@ nav a:before {
 	height: 0;
 	border-top: 50px solid transparent;  
 	border-bottom: 50px solid transparent;
-	border-left: 30px solid #000;
+	border-left: 30px solid #fff;
 	position: absolute;
 	top: 50%;
 	margin-top: -50px; 
@@ -107,6 +108,10 @@ nav a:before {
 .section-1 p {
 	padding-right: 20px;
 	line-height: 150%;
+}
+
+.section-1 .row .span-1-of-3 {
+	float: right;
 }
 
 .section-1 i {
@@ -145,6 +150,10 @@ nav a:before {
 .section-2 {
 	background-color: #fafafa;
 	height: 100%;
+}
+
+.mobile-select {
+	display: none;
 }
 
 .paw-title {
@@ -192,7 +201,7 @@ h2 {
 	border: 1px solid #000;
 }
 
-.type-list li {
+.type-list ul li {
 	list-style: none;
 	padding: 10px 10px;
 	display: block;
@@ -205,8 +214,13 @@ h2 {
 	text-decoration: none;
 }*/
 
-.type-list li:hover,
-.type-list li:active {
+.type-list ul li:hover,
+.type-list ul li:active {
+	background-color: #e67e22;
+	color: #fff;
+}
+
+.active {
 	background-color: #e67e22;
 	color: #fff;
 }

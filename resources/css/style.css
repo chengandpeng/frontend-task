@@ -86,7 +86,7 @@ nav a:before {
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../img/london.jpg);
-	/*background-attachment: fixed;*/
+	background-attachment: fixed;
 	color: #fff;
 }
 
@@ -195,11 +195,20 @@ h2 {
 .type-list li {
 	list-style: none;
 	padding: 10px 10px;
+	display: block;
+	cursor: pointer;
+	transition: all 0.5s ease;
 }
 
-.type-list li a:link,
+/*.type-list li a:link,
 .type-list li a:visited {
 	text-decoration: none;
+}*/
+
+.type-list li:hover,
+.type-list li:active {
+	background-color: #e67e22;
+	color: #fff;
 }
 
 .facilities {

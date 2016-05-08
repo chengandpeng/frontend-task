@@ -12,6 +12,10 @@ body {
 	overflow-x: hidden;
 }
 
+i {
+	color: #e67e22;
+}
+
 .clearfix {zoom:1}
 .clearfix:after {
 	content: '.';
@@ -184,12 +188,6 @@ h2 {
 
 .share i {
 	margin: 0 10px 0 5px;
-	transition: color 0.4s ease;
-}
-
-.share i:hover,
-.share i:active {
-	color: #e67e22;
 }
 
 .type-list {

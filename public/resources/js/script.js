@@ -1,44 +1,43 @@
 $(document).ready(function() {
 	var friends;
 
-	function getFriendLen(index) {
-		var len = 0;
+	function geneContent(index) {
+		var friend;
 		switch(index) {
 			case 0:
-				len = friends["deluxe"].friends.length;
+				friend = friends["deluxe"].friends;
 				break;
 			case 1:
-				len = friends["shared"].friends.length;
+				friend = friends["shared"].friends;
 				break;
 			case 2:
-				len = friends["animal-friendly"].friends.length;
+				friend = friends["animal-friendly"].friends;
 				break;
 			case 3:
-				len = friends["another"].friends.length;
+				friend = friends["another"].friends;
 				break;
 			case 4:
-				len = friends["and-another"].friends.length;
+				friend = friends["and-another"].friends;
 				break;
 		}
-		return len;
-	}
 
-	function getDynamicContent(len) {
-		var content = '';
-		switch(len) {
+		var sort_friend = friend.sort();
+		var content = ' has stayed here';
+		switch(friend.length) {
 			case 0:
+				content = '';
 				break;
 			case 1:
-				content = "Jane Doe has stayed here";
+				content = sort_friend[0] + content;
 				break;
 			case 2:
-				content = "Jane Doe and John Doe have stayed here";
+				content = sort_friend[0] + ", " + sort_friend[1] + content;
 				break;
 			case 3:
-				content = "Jane Doe, John Doe, and 1 other friend have stayed here";
+				content = sort_friend[0] + ", " + sort_friend[1] + ", and 1 other friend" + content;
 				break;
 			default:
-				content = "Jane Doe, John Doe, and 2 other friends have stayed here";
+				content = sort_friend[0] + ", " + sort_friend[1] + ", and " + (friend.length - 2) + " other friends" + content;
 		}
 		return content;
 	}
@@ -47,14 +46,12 @@ $(document).ready(function() {
 		$(".type-list ul li").removeClass("active");
 		$(this).addClass("active");
 
-		var len = getFriendLen($(this).index());
-		var content = getDynamicContent(len);
+		var content = geneContent($(this).index());
 		$("#friendMessage").text(content);
 	});
 
 	$(".mobile-select select").change(function() {
-		var len = getFriendLen(parseInt($(this).val()));
-		var content = getDynamicContent(len);
+		var content = geneContent(parseInt($(this).val()));
 		$("#friendMessage").text(content);
 	});
 

@@ -1,35 +1,5 @@
 $(document).ready(function() {
-	var friends = {
-		"deluxe": {
-    	"friends": [
-      	"Bob Smith",
-      	"Jane Doe",
-      	"Bubba Hyde",
-      	"Betsy Toheavens"
-      ]
-  	},
-    "shared": {
-      "friends": [
-      	"Bob Smith"
-       ]
-    },
-    "animal-friendly": {
-    	"friends": [
-        "Bob Smith",
-        "Jane Doe",
-        "Bubba Hyde"
-      ]
-    },
-    "another": {
-      "friends": [
-        "Bob Smith",
-        "Jane Doe"
-      ]
-    },
-    "and-another": {
-    	"friends": []
-    }
-	}
+	var friends;
 
 	function getFriendLen(index) {
 		var len = 0;
@@ -89,5 +59,11 @@ $(document).ready(function() {
 	});
 
 	/* -- init click "Animal Friendly" tab --*/
-	$('#initClicked').trigger('click');
+	$.getJSON("friends.json", function(data) {
+		if(data) {
+			friends = data;
+			$('#initClicked').trigger('click');
+		}
+	})
+	
 });
